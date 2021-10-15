@@ -1,8 +1,8 @@
-import { createStore } from "vuex";
+import notes from "./notes";
 
-export default createStore({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {},
-});
+export default {
+    modules: {
+        notes: notes,
+
+    }
+};

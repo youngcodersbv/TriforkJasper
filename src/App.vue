@@ -1,17 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <add-note />
+  <Notes />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import AddNote from './components/AddNote.vue';
+import Notes from "./components/Notes.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    Notes,
+    AddNote,
   },
+    created() {
+        this.$store.dispatch("notes/getNotes");   
+    },
 };
+  
 </script>
 
 <style lang="scss">
