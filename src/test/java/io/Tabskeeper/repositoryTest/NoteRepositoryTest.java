@@ -25,7 +25,6 @@ public class NoteRepositoryTest {
     Note testNote1 = new Note();
 
     @BeforeEach
-    @Test
     void setUp(){
         testNote.setTitle("title");
         testNote.setBody("body");
@@ -36,13 +35,13 @@ public class NoteRepositoryTest {
     @Test
     void saveNote() {
         System.out.println("Running saveNote...");
-        //given a note being created and saved
+        //given a note being saved
         underTest.save(testNote);
 
-        // when all notes are found
+        //when all notes are found
         Iterable<Note> result = underTest.findAll();
 
-        //then we have a single Note in the stream
+        //then we only have a single Note in the stream
         assertEquals(1, StreamSupport.stream(result.spliterator(), false).count());
 
         //which is testNote

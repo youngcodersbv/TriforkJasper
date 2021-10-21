@@ -38,8 +38,7 @@ public class TabRepositoryTest {
 
         //then
         assertEquals(1, StreamSupport.stream(result.spliterator(), false).count());
-        for (Tab i: result) { assertEquals(testTab, i);
-        }
+        for (Tab i: result) { assertEquals(testTab, i);}
     }
     @Test
     void updateTab() {

@@ -24,6 +24,6 @@ public class TabTest {
         // when
 
         //then
-        assertEquals("Test tab", testTab.getName());
+        assertEquals("test tab", testTab.getName());
     }
 }
