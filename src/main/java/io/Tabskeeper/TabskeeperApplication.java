@@ -28,12 +28,6 @@ public class TabskeeperApplication {
 	public CommandLineRunner runAtStartOfApplicationContext(NoteRepository noteRepository) {
 		return (args) -> {
 			Iterable<Note> iter = noteRepository.findAll();
-
-			if (!iter.iterator().hasNext()) {
-				Note note = new Note();
-				note.setBody("Jaron");
-				noteRepository.save(note);
-			}
 		};
 	}
 	@Bean

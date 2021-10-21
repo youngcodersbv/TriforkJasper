@@ -1,6 +1,6 @@
 package io.Tabskeeper.dto;
 
-public class CreateNoteCommand {
+public class CreateNote {
     private String Title;
     private String Body;
 

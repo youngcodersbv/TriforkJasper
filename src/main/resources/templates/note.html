@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<a href="/">home</a>
+
+<table>
+    <thead>
+    <tr>
+        <th th:text="ID">ID</th>
+        <th th:text="Title"></th>
+        <th th:text="Body"></th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="note: ${notes}">
+        <td th:text="${note.id}"></td>
+        <td th:text="${note.title}"></td>
+        <td th:text="${note.body}"></td>
+    </tr>
+    </tbody>
+
+</table>
+</body>
+</html>
